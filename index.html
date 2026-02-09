@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Green Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2>GreenFashion</h2>
+  <ul>
+    <li>Home</li>
+    <li>Shop</li>
+    <li>Cart</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero">
+  <h1>Sustainable Fashion Store</h1>
+  <p>Eco-friendly • Minimal • Secure Shopping</p>
+</header>
+
+<!-- PRODUCTS -->
+<section class="products-section">
+  <h2>Our Products</h2>
+
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+      <h4>Green Cotton T-Shirt</h4>
+      <p>₹499</p>
+      <button onclick="addToCart('Green Cotton T-Shirt', 499)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+      <h4>Zip Neck Shirt</h4>
+      <p>₹1,299</p>
+      <button onclick="addToCart('Zip Neck Shirt', 1299)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3">
+      <h4>Classic Full Sleeve</h4>
+      <p>₹1,199</p>
+      <button onclick="addToCart('Classic Full Sleeve', 1199)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77">
+      <h4>Eco Sneakers</h4>
+      <p>₹2,499</p>
+      <button onclick="addToCart('Eco Sneakers', 2499)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+      <h4>Minimal Hoodie</h4>
+      <p>₹1,799</p>
+      <button onclick="addToCart('Minimal Hoodie', 1799)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+      <h4>Daily Wear Shirt</h4>
+      <p>₹899</p>
+      <button onclick="addToCart('Daily Wear Shirt', 899)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CHECKOUT -->
+<section class="checkout">
+  <h2>Checkout</h2>
+
+  <form onsubmit="event.preventDefault(); payNow();">
+    <label>Name</label>
+    <input type="text" required>
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Address</label>
+    <textarea required></textarea>
+
+    <h3>🛒 Cart Items</h3>
+    <ul id="cart-items"></ul>
+
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+    <button type="submit">Proceed to Payment</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 GreenFashion. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
